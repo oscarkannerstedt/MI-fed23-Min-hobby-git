@@ -11,15 +11,19 @@
     <header>
       <h1>Movie Database</h1>
       <nav>
-        <button>Action</button>
-        <button>Comedy</button>
-        <button>Drama</button>
-        <button>Science fiction</button>
+        <button id="action-button">Action</button>
+        <button id="comedy-button">Comedy</button>
+        <button id="drama-button">Drama</button>
+        <button id="science-fiction-button">Science fiction</button>
       </nav>
     </header>
 
     <main>
       <div id="movie-container"></div>
+      <div id="action-movies" class="actionMovies hide"></div>
+      <div id="comedy-movie" class="comedyMovie hide"></div>
+      <div id="drama-movies" class="dramaMovies hide"></div>
+      <div id="science-fiction-movies" class="scienceFictionMovies hide"></div>
     </main>
     
     <script type="module" src="/main.js"></script>

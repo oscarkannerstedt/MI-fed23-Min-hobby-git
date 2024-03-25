@@ -34,3 +34,7 @@ header {
     background-color: #777;
   }
 }
+
+.hide {
+  display: none;
+}
