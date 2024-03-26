@@ -3,6 +3,7 @@ import { getAllMovies, getMoviesByGenre } from './src/js/movies.js';
 import { showAllMovies } from './src/js/showAllMovies.js';
 import { showActionMovies } from './src/js/showActionMovies.js';
 import { showComedyMovies } from './src/js/showComedyMovies.js';
+import { showDramaMovies } from './src/js/showDramaMovies.js';
 
 window.addEventListener('DOMContentLoaded', async () => {
   showAllMovies();
@@ -14,6 +15,11 @@ window.addEventListener('DOMContentLoaded', async () => {
   document.getElementById("comedy-button").addEventListener("click", function() {
     console.log("klickat på komedi button");
     showComedyMovies();
+  });
+
+  document.getElementById("drama-button").addEventListener("click", function() {
+    console.log("klickat på drama button");
+    showDramaMovies();
   })
   
 });

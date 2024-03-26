@@ -43,7 +43,7 @@ header {
 
 /* Show movies*/
 
-.movie-container, .action-movies, .comedy-movies {
+.movie-container, .action-movies, .comedy-movies, .drama-movies {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
