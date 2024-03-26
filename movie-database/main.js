@@ -6,19 +6,25 @@ import { showComedyMovies } from './src/js/showComedyMovies.js';
 import { showDramaMovies } from './src/js/showDramaMovies.js';
 
 window.addEventListener('DOMContentLoaded', async () => {
+  const actionMoviesContainer = document.getElementById("action-movies");
+  const comedyMoviesContainer = document.getElementById("comedy-movies");
+  const dramaMoviesContainer = document.getElementById("drama-movies");
+
+
   showAllMovies();
 
   document.getElementById("action-button").addEventListener("click", function() {
+    actionMoviesContainer.innerHTML = "";
     showActionMovies();
   });
 
   document.getElementById("comedy-button").addEventListener("click", function() {
-    console.log("klickat på komedi button");
+    comedyMoviesContainer.innerHTML = "";
     showComedyMovies();
   });
 
   document.getElementById("drama-button").addEventListener("click", function() {
-    console.log("klickat på drama button");
+    dramaMoviesContainer.innerHTML = "";
     showDramaMovies();
   })
   
