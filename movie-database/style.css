@@ -41,9 +41,9 @@ header {
   display: none;
 }
 
-/* Show all movies*/
+/* Show movies*/
 
-.movie-container {
+.movie-container, .action-movies {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
