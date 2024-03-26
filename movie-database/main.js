@@ -4,5 +4,9 @@ import { showAllMovies } from './src/js/showAllMovies.js';
 
 window.addEventListener('DOMContentLoaded', async () => {
   showAllMovies();
+
+  document.getElementById('action-button').addEventListener('click', function() {
+    console.log("klickat på action button");
+  });
   
 });
