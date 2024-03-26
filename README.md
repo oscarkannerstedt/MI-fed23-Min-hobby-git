@@ -12,6 +12,6 @@ För betyg G:
 
 För betyg VG:
 
-[]  Ni behöver ha gjort minst en cherry-pick som skall framgå av den kommentar som ni har gjort på den commit som cherry-pickas. 
+[x]  Ni behöver ha gjort minst en cherry-pick som skall framgå av den kommentar som ni har gjort på den commit som cherry-pickas. 
 []  Ni skall ha gjort rebase på er main så att hela er history i main-branchen är helt rak. 
 []  Ni skall ha gjort minst en merge mellan två andra brancher så att det framgår att det har gjorts en merge (via kommentaren).
