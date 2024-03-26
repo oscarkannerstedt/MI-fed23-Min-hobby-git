@@ -1,23 +1,23 @@
 import { getMoviesByGenre } from "./movies.js";
 
-async function showActionMovies() {
-    const actionMovies = await getMoviesByGenre('28');
-    const actionMoviesContainer = document.getElementById("action-movies");
-    const movieContainer = document.getElementById("movie-container");
+async function showComedyMovies() {
+    const comedyMovies = await getMoviesByGenre('35');
     const comedyMoviesContainer = document.getElementById("comedy-movies");
+    const movieContainer = document.getElementById("movie-container");
+    const actionMoviesContainer = document.getElementById("action-movies");
 
     movieContainer.innerHTML = "";
     movieContainer.classList.add("hide");
     movieContainer.classList.remove("padded");
 
-    comedyMoviesContainer.innerHTML = "";
-    comedyMoviesContainer.classList.add("hide");
-    comedyMoviesContainer.classList.remove("padded");
+    actionMoviesContainer.innerHTML = "";
+    actionMoviesContainer.classList.add("hide");
+    actionMoviesContainer.classList.remove("padded");
 
-    actionMoviesContainer.classList.remove("hide");
-    actionMoviesContainer.classList.add("padded");
+    comedyMoviesContainer.classList.remove("hide");
+    comedyMoviesContainer.classList.add("padded");
 
-    actionMovies.forEach(movie => {
+    comedyMovies.forEach(movie => {
         const movieCard = document.createElement("div");
         movieCard.classList.add("movie-card");
 
@@ -39,8 +39,8 @@ async function showActionMovies() {
         moviePoster.alt = `${movie.title} Poster`;
 
         movieCard.append(movieTitle, moviePoster, movieReleaseYear, movieRating);
-        actionMoviesContainer.appendChild(movieCard);
+        comedyMoviesContainer.appendChild(movieCard);
     });
 }
 
-export { showActionMovies };
+export { showComedyMovies };
