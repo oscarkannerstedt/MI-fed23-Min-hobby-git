@@ -5,6 +5,7 @@ async function getAllMovies() {
     try {
         const response = await fetch(API_URL);
         const data = await response.json();
+        console.log(data);
         return data.results;
     } catch (error) {
         console.error("Error while fetching movies: ", error);
@@ -12,9 +13,9 @@ async function getAllMovies() {
     }
 }
 
-async function getMoviesbyGenre(genreId) {
+async function getMoviesByGenre(genreId) {
     const API_KEY = '2fb155d31c13f91b00f05dc941e6e6ea';
-    const API_URL = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}`;
+    const API_URL = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=${genreId}`;
 
     try {
         const response = await fetch(API_URL);
@@ -26,4 +27,4 @@ async function getMoviesbyGenre(genreId) {
     }
 }
 
-export { getAllMovies, getMoviesbyGenre };
+export { getAllMovies, getMoviesByGenre };
