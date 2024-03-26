@@ -21,6 +21,7 @@ async function showAllMovies() {
         movieRating.textContent = `Rating: ${movie.vote_average}`;
 
         const moviePoster = document.createElement("img");
+        moviePoster.classList.add("movie-poster");
         moviePoster.src = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
         moviePoster.alt = `${movie.title} Poster`;
 

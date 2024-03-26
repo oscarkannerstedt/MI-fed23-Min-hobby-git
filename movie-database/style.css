@@ -3,6 +3,8 @@ body {
   padding: 0;
 }
 
+/* Header */
+
 header {
   background-color: #333;
   color: #fff;
@@ -37,4 +39,42 @@ header {
 
 .hide {
   display: none;
+}
+
+/* Show all movies*/
+
+.movie-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.movie-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  max-width: 250px;
+}
+
+.movie-poster {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.movie-title {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.movie-release-year,
+.movie-rating {
+  font-size: 1em;
+  margin-bottom: 5px;
+  text-align: center;
 }
