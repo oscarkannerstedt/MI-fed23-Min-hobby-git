@@ -1,11 +1,11 @@
 import { getMoviesByGenre } from "./movies.js";
 
-async function showComedyMovies() {
-    const comedyMovies = await getMoviesByGenre('35');
-    const comedyMoviesContainer = document.getElementById("comedy-movies");
+async function showScienceFictionMovies() {
+    const scienceFictionMovies = await getMoviesByGenre('878');
+    const scienceFictionMoviesContainer = document.getElementById("science-fiction-movies");
     const movieContainer = document.getElementById("movie-container");
     const actionMoviesContainer = document.getElementById("action-movies");
-    const scienceFictionMoviesContainer = document.getElementById("science-fiction-movies");
+    const comedyMoviesContainer = document.getElementById("comedy-movies");
     const dramaMoviesContainer = document.getElementById("drama-movies");
 
     movieContainer.innerHTML = "";
@@ -16,18 +16,18 @@ async function showComedyMovies() {
     actionMoviesContainer.classList.add("hide");
     actionMoviesContainer.classList.remove("padded");
 
+    comedyMoviesContainer.innerHTML = "";
+    comedyMoviesContainer.classList.add("hide");
+    comedyMoviesContainer.classList.remove("padded");
+
     dramaMoviesContainer.innerHTML = "";
     dramaMoviesContainer.classList.add("hide");
     dramaMoviesContainer.classList.remove("padded");
 
-    scienceFictionMoviesContainer.innerHTML = "";
-    scienceFictionMoviesContainer.classList.add("hide");
-    scienceFictionMoviesContainer.classList.remove("padded");
+    scienceFictionMoviesContainer.classList.remove("hide");
+    scienceFictionMoviesContainer.classList.add("padded");
 
-    comedyMoviesContainer.classList.remove("hide");
-    comedyMoviesContainer.classList.add("padded");
-
-    comedyMovies.forEach(movie => {
+    scienceFictionMovies.forEach(movie => {
         const movieCard = document.createElement("div");
         movieCard.classList.add("movie-card");
 
@@ -49,8 +49,8 @@ async function showComedyMovies() {
         moviePoster.alt = `${movie.title} Poster`;
 
         movieCard.append(movieTitle, moviePoster, movieReleaseYear, movieRating);
-        comedyMoviesContainer.appendChild(movieCard);
+        scienceFictionMoviesContainer.appendChild(movieCard);
     });
 }
 
-export { showComedyMovies };
+export { showScienceFictionMovies };

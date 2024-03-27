@@ -4,11 +4,13 @@ import { showAllMovies } from './src/js/showAllMovies.js';
 import { showActionMovies } from './src/js/showActionMovies.js';
 import { showComedyMovies } from './src/js/showComedyMovies.js';
 import { showDramaMovies } from './src/js/showDramaMovies.js';
+import { showScienceFictionMovies } from './src/js/showScienceFictionMovies.js';
 
 window.addEventListener('DOMContentLoaded', async () => {
   const actionMoviesContainer = document.getElementById("action-movies");
   const comedyMoviesContainer = document.getElementById("comedy-movies");
   const dramaMoviesContainer = document.getElementById("drama-movies");
+  const scienceFictionMoviesContainer = document.getElementById("science-fiction-movies");
 
 
   showAllMovies();
@@ -26,6 +28,11 @@ window.addEventListener('DOMContentLoaded', async () => {
   document.getElementById("drama-button").addEventListener("click", function() {
     dramaMoviesContainer.innerHTML = "";
     showDramaMovies();
-  })
+  });
+
+  document.getElementById("science-fiction-button").addEventListener("click", function() {
+    scienceFictionMoviesContainer.innerHTML = "";
+    showScienceFictionMovies();
+  });
   
 });

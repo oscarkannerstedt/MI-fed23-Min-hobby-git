@@ -5,6 +5,8 @@ async function showActionMovies() {
     const actionMoviesContainer = document.getElementById("action-movies");
     const movieContainer = document.getElementById("movie-container");
     const comedyMoviesContainer = document.getElementById("comedy-movies");
+    const scienceFictionMoviesContainer = document.getElementById("science-fiction-movies");
+    const dramaMoviesContainer = document.getElementById("drama-movies");
 
     movieContainer.innerHTML = "";
     movieContainer.classList.add("hide");
@@ -13,6 +15,14 @@ async function showActionMovies() {
     comedyMoviesContainer.innerHTML = "";
     comedyMoviesContainer.classList.add("hide");
     comedyMoviesContainer.classList.remove("padded");
+
+    dramaMoviesContainer.innerHTML = "";
+    dramaMoviesContainer.classList.add("hide");
+    dramaMoviesContainer.classList.remove("padded");
+
+    scienceFictionMoviesContainer.innerHTML = "";
+    scienceFictionMoviesContainer.classList.add("hide");
+    scienceFictionMoviesContainer.classList.remove("padded");
 
     actionMoviesContainer.classList.remove("hide");
     actionMoviesContainer.classList.add("padded");
