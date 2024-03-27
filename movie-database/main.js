@@ -6,6 +6,7 @@ import { showComedyMovies } from './src/js/showComedyMovies.js';
 import { showDramaMovies } from './src/js/showDramaMovies.js';
 import { showScienceFictionMovies } from './src/js/showScienceFictionMovies.js';
 import { showTopRatedMovies } from './src/js/showTopRatedMovies.js';
+import { showUpcomingMovies } from './src/js/showUpcomingMovies.js';
 
 window.addEventListener('DOMContentLoaded', async () => {
   const actionMoviesContainer = document.getElementById("action-movies");
@@ -13,6 +14,7 @@ window.addEventListener('DOMContentLoaded', async () => {
   const dramaMoviesContainer = document.getElementById("drama-movies");
   const scienceFictionMoviesContainer = document.getElementById("science-fiction-movies");
   const topRatedMoviesContainer = document.getElementById("top-rated-movies");
+  const upcomingMoviesContainer = document.getElementById("upcoming-movies");
 
 
   showAllMovies();
@@ -40,6 +42,11 @@ window.addEventListener('DOMContentLoaded', async () => {
   document.getElementById("top-rated-button").addEventListener("click", function() {
     topRatedMoviesContainer.innerHTML = "";
     showTopRatedMovies();
+  });
+
+  document.getElementById("upcoming-button").addEventListener("click", function() {
+    upcomingMoviesContainer.innerHTML = "";
+    showUpcomingMovies();
   });
   
 });

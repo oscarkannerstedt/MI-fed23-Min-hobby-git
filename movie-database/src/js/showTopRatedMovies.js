@@ -8,6 +8,7 @@ async function showTopRatedMovies() {
     const comedyMoviesContainer = document.getElementById("comedy-movies");
     const scienceFictionMoviesContainer = document.getElementById("science-fiction-movies");
     const dramaMoviesContainer = document.getElementById("drama-movies");
+    const upcomingMoviesContainer = document.getElementById("upcoming-movies");
 
     movieContainer.innerHTML = "";
     movieContainer.classList.add("hide");
@@ -28,6 +29,10 @@ async function showTopRatedMovies() {
     actionMoviesContainer.innerHTML = "";
     actionMoviesContainer.classList.add("hide");
     actionMoviesContainer.classList.remove("padded");
+
+    upcomingMoviesContainer.innerHTML = "";
+    upcomingMoviesContainer.classList.add("hide");
+    upcomingMoviesContainer.classList.remove("padded");
 
     topRatedMoviesContainer.classList.remove("hide");
     topRatedMoviesContainer.classList.add("padded");
