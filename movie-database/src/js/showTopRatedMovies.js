@@ -1,38 +1,38 @@
-import { getMoviesByGenre } from "./movies.js";
+import { getTopRatedMovies } from "./movies.js";
 
-async function showDramaMovies() {
-    const dramaMovies = await getMoviesByGenre('18');
-    const dramaMoviesContainer = document.getElementById("drama-movies");
-    const movieContainer = document.getElementById("movie-container");
+async function showTopRatedMovies() {
+    const topRatedMovies = await getTopRatedMovies();
+    const topRatedMoviesContainer = document.getElementById("top-rated-movies");
     const actionMoviesContainer = document.getElementById("action-movies");
+    const movieContainer = document.getElementById("movie-container");
     const comedyMoviesContainer = document.getElementById("comedy-movies");
     const scienceFictionMoviesContainer = document.getElementById("science-fiction-movies");
-    const topRatedMoviesContainer = document.getElementById("top-rated-movies");
+    const dramaMoviesContainer = document.getElementById("drama-movies");
 
     movieContainer.innerHTML = "";
     movieContainer.classList.add("hide");
     movieContainer.classList.remove("padded");
 
-    actionMoviesContainer.innerHTML = "";
-    actionMoviesContainer.classList.add("hide");
-    actionMoviesContainer.classList.remove("padded");
-
     comedyMoviesContainer.innerHTML = "";
     comedyMoviesContainer.classList.add("hide");
     comedyMoviesContainer.classList.remove("padded");
+
+    dramaMoviesContainer.innerHTML = "";
+    dramaMoviesContainer.classList.add("hide");
+    dramaMoviesContainer.classList.remove("padded");
 
     scienceFictionMoviesContainer.innerHTML = "";
     scienceFictionMoviesContainer.classList.add("hide");
     scienceFictionMoviesContainer.classList.remove("padded");
 
-    topRatedMoviesContainer.innerHTML = "";
-    topRatedMoviesContainer.classList.add("hide");
-    topRatedMoviesContainer.classList.remove("padded");
+    actionMoviesContainer.innerHTML = "";
+    actionMoviesContainer.classList.add("hide");
+    actionMoviesContainer.classList.remove("padded");
 
-    dramaMoviesContainer.classList.remove("hide");
-    dramaMoviesContainer.classList.add("padded");
+    topRatedMoviesContainer.classList.remove("hide");
+    topRatedMoviesContainer.classList.add("padded");
 
-    dramaMovies.forEach(movie => {
+    topRatedMovies.forEach(movie => {
         const movieCard = document.createElement("div");
         movieCard.classList.add("movie-card");
 
@@ -54,8 +54,8 @@ async function showDramaMovies() {
         moviePoster.alt = `${movie.title} Poster`;
 
         movieCard.append(movieTitle, moviePoster, movieReleaseYear, movieRating);
-        dramaMoviesContainer.appendChild(movieCard);
+        topRatedMoviesContainer.appendChild(movieCard);
     });
 }
 
-export { showDramaMovies };
+export { showTopRatedMovies };
